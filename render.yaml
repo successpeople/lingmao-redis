@@ -5,7 +5,8 @@ services:
   - type: web
     name: lingmao-redis-api
     runtime: node
-    # plan: starter
+    # 必须写 free：Blueprint 不写 plan 时可能默认 starter，会强制绑卡验证
+    plan: free
     buildCommand: npm install
     startCommand: npm start
     healthCheckPath: /health
