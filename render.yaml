@@ -1,0 +1,11 @@
+# Render Blueprint (optional): New → Blueprint → paste repo URL & use this file
+# Set REDIS_* and optional API_KEY in dashboard if not using synced secrets.
+
+services:
+  - type: web
+    name: lingmao-redis-api
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
